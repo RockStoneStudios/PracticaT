@@ -1,6 +1,8 @@
 const fetch = require('node-fetch');
 const Data = require('../model/Data');
 
+// Obtengo los datos de la api de reddit y los guardo en la base de datos Mysql
+
 const cargaData = async() => {
     try {
         const response = await fetch("https://www.reddit.com/reddits.json");

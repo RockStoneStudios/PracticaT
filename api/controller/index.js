@@ -2,8 +2,7 @@ const fetch = require('node-fetch');
 const Data = require('../model/Data');
 
 
-
-
+     // Obtiene los datos guardados en la base de datos de Mysql
    const obtenerData = async(req,res) =>{
       try {
         const datos = await Data.findAll();
