@@ -9,14 +9,15 @@ const cargaData = async() => {
     const datos = await Promise.all(data.data.children.map((item)=>{
          Data.create({
                 title : item.data.title,
-                image : item.data.header_img ? item.data.header_img : item.data. banner_background_image,
-                color : item.data.primary_color,
-                description : item.data.public_description
+                image : item.data.header_img ?  item.data.header_img : "https://gamequitters.com/wp-content/uploads/wasting-time-on-reddit2.jpg",
+                category : item.data.advertiser_category,
+                description : item.data.public_description,
+            
             });
         
     }));
     console.log(datos);
-       return res.status(201).json({message : "Ok"});
+     
 
   }catch(error){
     console.log(error);

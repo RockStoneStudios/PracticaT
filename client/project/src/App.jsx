@@ -18,7 +18,7 @@ function App() {
     <div className="container">
      {
        datos.map(item =>(
-          <Card title = {item.title} image = {item.image} description = {item.description}/>
+          <Card title = {item.title} image = {item.image} description = {item.description} category={item.category}/>
        ))
      }
     </div>

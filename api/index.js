@@ -4,7 +4,7 @@ const {cargaData} = require('./model/cargaData');
 
 app.listen(process.env.PORT,()=>{ 
     
-      db.sync({force : false}).then(()=>{
+      db.sync({force : true}).then(()=>{
           console.log('Database Connected Sucessfull');
       }).catch(error =>{
           console.log(error);

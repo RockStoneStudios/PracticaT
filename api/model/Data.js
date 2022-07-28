@@ -10,16 +10,20 @@ Data.init({
      },
      image : {
         type : DataTypes.STRING,
-        
+      
+      
+                
      },
-     color : {
-        type : DataTypes.STRING
+     category : {
+        type : DataTypes.STRING,
+        allowNull : false,
+        defaultValue : "Reddit"
      },
      description : {
         type : DataTypes.STRING(1234),
         allowNull : false,
+     },
 
-     }
 },{
     timestamps : false,
     sequelize,
